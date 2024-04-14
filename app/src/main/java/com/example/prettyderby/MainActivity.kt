@@ -46,10 +46,6 @@ class MainActivity : AppCompatActivity() {
             val btnString = "截圖打印!!!"
             println(btnString)
             imageView.setImageBitmap(getScreenShot())
-            /*Toast.makeText(this, btnString, Toast.LENGTH_SHORT).show()
-
-            val mediaProjectionManager = getSystemService(MEDIA_PROJECTION_SERVICE) as MediaProjectionManager
-            startActivityForResult(mediaProjectionManager.createScreenCaptureIntent(), REQUEST_SCREENSHOT)*/
         }
 
         val checkAccessibility = CheckAccessibility()
@@ -63,16 +59,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == REQUEST_SCREENSHOT && resultCode == RESULT_OK && data != null) {
-            val serviceIntent = Intent(this, ScreenshotService::class.java).apply {
-                putExtra("resultCode", resultCode)
-                putExtra("data", data)
-            }
-            startService(serviceIntent)
-        }
-    }
     private fun getScreenShot(): Bitmap? {
         //將螢幕畫面存成一個View
         val view = window.decorView
