@@ -32,7 +32,7 @@ class MyAccessibilityService : AccessibilityService() {
             // 设置新的延迟任务
             if (isClicked)
                 return
-            clickHandler.postDelayed({clickButton("com.example.apitest:id/Bt_longin")},clickDelay)
+            clickHandler.postDelayed({clickButton("com.example.prettyderby:id/Bt_longin")},clickDelay)
             clickHandler.removeCallbacks(clickRunnable)
             isClicked=true
         }

@@ -37,10 +37,6 @@
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
         </service>
-        <service
-            android:name=".ScreenshotService"
-            android:exported="false">
-        </service>
     </application>
 
 </manifest>
