@@ -135,7 +135,8 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
-apply plugin: 'com.android.library'
+//apply plugin: 'com.android.library'
+apply plugin: 'com.android.applicat'
 //apply plugin: 'kotlin-android'
 
 def openCVersionName = "4.8.0"
