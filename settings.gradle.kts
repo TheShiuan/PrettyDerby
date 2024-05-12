@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "PrettyDerby"
 include(":app")
+include(":openCV")

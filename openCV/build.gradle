@@ -135,8 +135,8 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
-//apply plugin: 'com.android.library'
-apply plugin: 'com.android.applicat'
+apply plugin: 'com.android.library'
+//apply plugin: 'com.android.applicat'
 //apply plugin: 'kotlin-android'
 
 def openCVersionName = "4.8.0"
@@ -145,7 +145,7 @@ def openCVersionCode = ((4 * 100 + 8) * 100 + 0) * 10 + 0
 println "OpenCV: " +openCVersionName + " " + project.buildscript.sourceFile
 
 android {
-    
+    namespace "org.opencv"
     compileSdkVersion 33
 
     defaultConfig {
